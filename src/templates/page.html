@@ -1,0 +1,75 @@
+---
+title: Coderiver Test
+mainTitle: Built with app designers in mind
+mainDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<header class="header">
+  <div class="container">
+    {% include "partials/_topline.html" %}
+    <div class="header__content">
+      <article class="header__article article">
+        <h1 class="article__title">{{mainTitle}}</h1>
+        <p class="article__desc">
+          {{mainDesc}}
+        </p>
+        <a href="#" class="article__link">How it work</a>
+      </article>
+      <div class="header__image">
+        <img src="img/iphone.png" alt="" class="image">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="about">
+  <div class="container">
+    <h2 class="about__title">How it works</h2>
+    <p class="about__subtitle">Lorem ipsum is simply</p>
+    <ul class="about__list">
+      {{mixins.aboutItem('img/ic-food.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
+      printing and typesetting industry')}}
+      {{mixins.aboutItem('img/ic-cart.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
+      printing and typesetting industry')}}
+      {{mixins.aboutItem('img/ic-setting.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
+      printing and typesetting industry')}}
+      {{mixins.aboutItem('img/ic-user.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
+      printing and typesetting industry')}}
+      {{mixins.aboutItem('img/ic-edit.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
+      printing and typesetting industry')}}
+      {{mixins.aboutItem('img/ic-email.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
+      printing and typesetting industry')}}
+    </ul>
+  </div>
+</section>
+
+<section class="join">
+  <div class="container">
+    <article class="join__article">
+      <h2 class="join__title">Receive notification now</h2>
+      <p class="join__desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Lorem ipsum dolor.
+      </p>
+    </article>
+    <form class="join__form form">
+      <input class="form__email" type="email" placeholder="Your email address ...">
+      <input class="form__btn" type="submit" value="I’M READY!">
+    </form>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container container--flex">
+    {{mixins.contactItem('phone', 'tel:+84 985 234 812', 'call us at: +84 985 234 812')}}
+    {{mixins.contactItem('email', 'mailto:support@comvanphongvip.vn', 'support@comvanphongvip.vn')}}
+    {{mixins.contactItem('address', 'https://goo.gl/maps/wTJUYzgFG4z', '168 Nguyen Xien, Thanh Xuan, Ha Noi')}}
+  </div>
+</section>
+
+{% include "partials/_footer.html" %}
+</div>
+{% endblock %}

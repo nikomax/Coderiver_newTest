@@ -1,0 +1,39 @@
+$main_font: 'Roboto', sans-serif
+$main_text_color: #ffffff
+$hover_color: #ff8400
+$gradient: -webkit-linear-gradient( 141deg, rgb(255,132,0) 0%, rgb(251,61,60) 100%)
+
+*
+  margin: 0
+  padding: 0
+  font-family: $main_font
+  @media (min-width: 320px)
+    font-size: 13px
+  @media (min-width: 425px)
+    font-size: 15px
+  @media (min-width: 768px)
+    font-size: 18px
+
+a
+  text-decoration: none
+
+li
+  list-style: none
+
+.container
+  margin: 0 auto
+  max-width: 1170px
+  padding: 0 20px
+
+.container--flex
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+@import "header"
+@import "about"
+@import "join"
+@import "contact"
+@import "footer"

@@ -1,0 +1,32 @@
+.footer
+  padding: 15px
+
+.container--footer
+  @media (min-width: 320px)
+    justify-content: center
+  @media (min-width: 768px)
+    justify-content: space-between
+
+.copy
+  margin: 10px 0
+  color: #5c5c5c
+  text-align: center
+
+.social
+  margin: 10px 0
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+.social__item
+  @media (min-width: 320px)
+    margin-left: 20px
+  @media (min-width: 768px)
+    margin-left: 40px
+
+.social__link
+  fill: #868686
+  &:hover
+    fill: $hover_color
+    transition: 0.3s

@@ -1,0 +1,140 @@
+.header
+  position: relative
+  background-image: url("../img/header-bg.png")
+  background-repeat: no-repeat
+  background-size: cover
+  color: $main_text_color
+  a
+    color: $main_text_color
+    font-weight: 400
+  @media (min-width: 320px)
+    padding: 25px 0 50px 0
+  @media (min-width: 425px)
+    padding: 25px 0 100px 0
+
+.top-line
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+.nav
+  &:hover>.nav__list
+    @media (min-width: 320px)
+      display: block
+    @media (min-width: 768px)
+      display: flex
+
+.nav-mobile
+  width: 50px
+  &:hover
+    cursor: pointer
+  @media (min-width: 320px)
+    display: block
+  @media (min-width: 768px)
+    display: none
+
+.nav-line
+  display: block
+  height: 6px
+  width: 50px
+  background-color: #ff8400
+  border-radius: 5px
+  &:nth-child(2)
+    margin: 5px 0
+
+.nav__list
+  margin-top: 21px
+  @media (min-width: 320px)
+    padding: 20px 0
+    display: none
+    position: absolute
+    width: 200px
+    border-radius: 80px
+    top: 44px
+    right: 0
+    text-align: center
+    background-image: url("../img/header-bg.png")
+  @media (min-width: 768px)
+    padding: 0
+    position: static
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    width: auto
+    border-radius: 0
+    top: 44px
+    right: 0
+    text-align: right
+    background-image: none
+
+.list__item
+  @media (min-width: 320px)
+    margin-left: 0
+    padding: 10px
+  @media (min-width: 768px)
+    margin-left: 40px
+    padding: 0
+  @media (min-width: 892px)
+    margin-left: 63px
+
+.list__link
+  @media (min-width: 320px)
+    padding: 10px
+    font-size: 18px
+  @media (min-width: 768px)
+    padding: 0
+    font-size: 18px
+
+.list__link:hover
+  color: $hover_color
+  transition: 0.5s
+
+.header__content
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  @media (min-width: 320px)
+    margin-top: 20px
+  @media (min-width: 768px)
+    margin-top: 123px
+
+.header__article
+  @media (min-width: 320px)
+    max-width: 100%
+  @media (min-width: 768px)
+    max-width: 50%
+
+.article__title
+  font-size: 38px
+  font-weight: 500
+  margin-top: 60px
+
+.article__desc
+  margin-top: 40px
+  font-size: 20px
+  font-weight: 400
+  line-height: 36px
+
+.article__link
+  display: inline-block
+  text-transform: uppercase
+  padding: 20px 63px
+  border: 2px solid #ffffff
+  border-radius: 5px
+  transition: 0.5s
+  &:hover
+    background-color: white
+    color: #ff8400
+  @media (min-width: 320px)
+    margin: 30px 0
+  @media (min-width: 768px)
+    margin: 90px 0
+
+.header__image
+  @media (min-width: 320px)
+    display: none
+  @media (min-width: 768px)
+    display: block

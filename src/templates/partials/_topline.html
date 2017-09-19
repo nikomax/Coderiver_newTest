@@ -1,0 +1,23 @@
+{% import "partials/_mixins.html" as mixins %}
+<div class="top-line">
+  <div class="header__logo">
+    <a href="/" class="logo">
+      <img src="img/logo.png" alt="Logo" class="logo__image">
+    </a>
+  </div>
+  <nav class="nav">
+    <div class="nav-mobile">
+      <span class="nav-line"></span>
+      <span class="nav-line"></span>
+      <span class="nav-line"></span>
+    </div>
+    <ul class="nav__list list">
+      {{mixins.listItem('About')}}
+      {{mixins.listItem('Download')}}
+      {{mixins.listItem('Workflow')}}
+      {{mixins.listItem('Support')}}
+      {{mixins.listItem('User Storie')}}
+      {{mixins.listItem('Contact')}}
+    </ul>
+  </nav>
+</div>

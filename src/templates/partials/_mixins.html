@@ -1,0 +1,27 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro listItem(i) %}
+<li class="list__item">
+  <a href="#" class="list__link">{{i}}</a>
+</li>
+{% endmacro %}
+
+{% macro aboutItem(src, title, desc) %}
+<li class="about__item item">
+  <div class="item__image"><img src="{{src}}" alt="Item image" class="image"></div>
+  <h3 class="item__title">{{title}}</h3>
+  <p class="item_desc">
+    {{desc}}
+  </p>
+</li>
+{% endmacro %}
+
+{% macro contactItem(type, href, text) %}
+<div class="contact__item contact__item--{{type}}">
+  <a href="{{href}}" class="contact__link contact__link--{{type}}">
+    {{text}}
+  </a>
+</div>
+{% endmacro %}
