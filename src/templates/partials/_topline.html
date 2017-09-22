@@ -1,3 +1,7 @@
+<!-- -&#45;&#45;-->
+<!--listItems: ['About', 'Download', 'Workflow', 'Support', 'User Storie', 'Contact']-->
+<!-- -&#45;&#45;-->
+
 {% import "partials/_mixins.html" as mixins %}
 <div class="top-line">
   <div class="header__logo">
@@ -12,12 +16,12 @@
       <span class="nav-line"></span>
     </div>
     <ul class="nav__list list">
-      {{mixins.listItem('About')}}
-      {{mixins.listItem('Download')}}
-      {{mixins.listItem('Workflow')}}
-      {{mixins.listItem('Support')}}
-      {{mixins.listItem('User Storie')}}
-      {{mixins.listItem('Contact')}}
+      {% import "data/data.html" as list %}
+        {% for item in list.listNav %}
+        <li class="list__item">
+          <a href="#" class="list__link">{{item.item}}</a>
+        </li>
+        {% endfor %}
     </ul>
   </nav>
 </div>

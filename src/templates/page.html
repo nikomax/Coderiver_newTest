@@ -2,6 +2,37 @@
 title: Coderiver Test
 mainTitle: Built with app designers in mind
 mainDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+aboutItems: [
+{
+src: 'img/ic-food.png',
+title: 'Lorem ipsum is simply dummy',
+desc: 'Lorem ipsum is simply dummy text of the printing and typesetting industry'
+},
+{
+src: 'img/ic-cart.png',
+title: 'Lorem ipsum is simply dummy',
+desc: 'Lorem ipsum is simply dummy text of the printing and typesetting industry'
+},
+{
+src: 'img/ic-setting.png',
+title: 'Lorem ipsum is simply dummy',
+desc: 'Lorem ipsum is simply dummy text of the printing and typesetting industry'
+},
+{
+src: 'img/ic-user.png',
+title: 'Lorem ipsum is simply dummy',
+desc: 'Lorem ipsum is simply dummy text of the printing and typesetting industry'
+},
+{
+src: 'img/ic-edit.png',
+title: 'Lorem ipsum is simply dummy',
+desc: 'Lorem ipsum is simply dummy text of the printing and typesetting industry'
+},
+{
+src: 'img/ic-email.png',
+title: 'Lorem ipsum is simply dummy',
+desc: 'Lorem ipsum is simply dummy text of the printing and typesetting industry'
+}]
 ---
 
 {% extends "layouts/_layout.html" %}
@@ -10,15 +41,15 @@ mainDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 <header class="header">
   <div class="container">
     {% include "partials/_topline.html" %}
-    <div class="header__content">
-      <article class="header__article article">
+    <div class="content">
+      <article class="article">
         <h1 class="article__title">{{mainTitle}}</h1>
         <p class="article__desc">
           {{mainDesc}}
         </p>
-        <a href="#" class="article__link">How it work</a>
+        <a href="#" class="more-link">How it work</a>
       </article>
-      <div class="header__image">
+      <div class="main-image">
         <img src="img/iphone.png" alt="" class="image">
       </div>
     </div>
@@ -30,18 +61,15 @@ mainDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
     <h2 class="about__title">How it works</h2>
     <p class="about__subtitle">Lorem ipsum is simply</p>
     <ul class="about__list">
-      {{mixins.aboutItem('img/ic-food.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
-      printing and typesetting industry')}}
-      {{mixins.aboutItem('img/ic-cart.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
-      printing and typesetting industry')}}
-      {{mixins.aboutItem('img/ic-setting.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
-      printing and typesetting industry')}}
-      {{mixins.aboutItem('img/ic-user.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
-      printing and typesetting industry')}}
-      {{mixins.aboutItem('img/ic-edit.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
-      printing and typesetting industry')}}
-      {{mixins.aboutItem('img/ic-email.png','Lorem ipsum is simply dummy', 'Lorem ipsum is simply dummy text of the
-      printing and typesetting industry')}}
+      {% for item in aboutItems %}
+      <li class="item item_margin-top">
+        <div class="image-bg"><img src="{{item.src}}" alt="Item image" class="image"></div>
+        <h3 class="item__title">{{item.title}}</h3>
+        <p class="item_desc">
+          {{item.desc}}
+        </p>
+      </li>
+      {% endfor %}
     </ul>
   </div>
 </section>
@@ -55,15 +83,15 @@ mainDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
         labore et dolore magna aliqua. Lorem ipsum dolor.
       </p>
     </article>
-    <form class="join__form form">
-      <input class="form__email" type="email" placeholder="Your email address ...">
-      <input class="form__btn" type="submit" value="I’M READY!">
+    <form class="form">
+      <input class="email-input" type="email" placeholder="Your email address ...">
+      <input class="submit-btn" type="submit" value="I’M READY!">
     </form>
   </div>
 </section>
 
-<section class="contact">
-  <div class="container container--flex">
+<section class="contacts">
+  <div class="container container_flex">
     {{mixins.contactItem('phone', 'tel:+84 985 234 812', 'call us at: +84 985 234 812')}}
     {{mixins.contactItem('email', 'mailto:support@comvanphongvip.vn', 'support@comvanphongvip.vn')}}
     {{mixins.contactItem('address', 'https://goo.gl/maps/wTJUYzgFG4z', '168 Nguyen Xien, Thanh Xuan, Ha Noi')}}

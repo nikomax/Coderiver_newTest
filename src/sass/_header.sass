@@ -61,7 +61,6 @@
     position: static
     display: flex
     flex-direction: row
-    justify-content: space-between
     flex-wrap: wrap
     width: auto
     border-radius: 0
@@ -92,7 +91,7 @@
   color: $hover_color
   transition: 0.5s
 
-.header__content
+.content
   display: flex
   flex-direction: row
   justify-content: space-between
@@ -102,7 +101,7 @@
   +rmin(768)
     margin-top: 123px
 
-.header__article
+.article
   +rmin(320)
     max-width: 100%
   +rmin(768)
@@ -119,7 +118,7 @@
   font-weight: 400
   line-height: 36px
 
-.article__link
+.more-link
   display: inline-block
   text-transform: uppercase
   padding: 20px 63px
@@ -134,7 +133,7 @@
   +rmin(768)
     margin: 90px 0
 
-.header__image
+.main-image
   +rmin(320)
     display: none
   +rmin(768)

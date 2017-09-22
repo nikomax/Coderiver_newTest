@@ -18,23 +18,27 @@
 .about__list
   display: flex
   flex-direction: row
-  justify-content: space-between
+  justify-content: space-around
   flex-wrap: wrap
 
-.about__item
+.item
+  +rmin(320)
+  	width: 100%
+  +rmin(425)
+  	width: 40%
+  +rmin(768)
+  	width: 31%
   display: flex
   flex-direction: column
   justify-content: center
+
+.item_margin-top
   +rmin(320)
-    width: 100%
     margin-top: 50px
-  +rmin(425)
-    width: 40%
   +rmin(768)
-    width: 31%
     margin-top: 93px
 
-.item__image
+.image-bg
   background-image: url("../img/item-bg.png")
   background-position: center
   background-repeat: no-repeat
