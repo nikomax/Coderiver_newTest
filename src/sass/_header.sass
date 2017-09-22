@@ -7,9 +7,9 @@
   a
     color: $main_text_color
     font-weight: 400
-  @media (min-width: 320px)
+  +rmin(320)
     padding: 25px 0 50px 0
-  @media (min-width: 425px)
+  +rmin(425)
     padding: 25px 0 100px 0
 
 .top-line
@@ -18,20 +18,21 @@
   justify-content: space-between
   align-items: center
 
-.nav
-  &:hover>.nav__list
-    @media (min-width: 320px)
-      display: block
-    @media (min-width: 768px)
-      display: flex
+
++rmin(320)
+  .nav:hover>.nav__list
+	  display: block
++rmin(768)
+  .nav:hover>.nav__list
+	  display: flex
 
 .nav-mobile
   width: 50px
   &:hover
     cursor: pointer
-  @media (min-width: 320px)
+  +rmin(320)
     display: block
-  @media (min-width: 768px)
+  +rmin(768)
     display: none
 
 .nav-line
@@ -45,7 +46,7 @@
 
 .nav__list
   margin-top: 21px
-  @media (min-width: 320px)
+  +rmin(320)
     padding: 20px 0
     display: none
     position: absolute
@@ -55,7 +56,7 @@
     right: 0
     text-align: center
     background-image: url("../img/header-bg.png")
-  @media (min-width: 768px)
+  +rmin(768)
     padding: 0
     position: static
     display: flex
@@ -70,20 +71,20 @@
     background-image: none
 
 .list__item
-  @media (min-width: 320px)
+  +rmin(320)
     margin-left: 0
     padding: 10px
-  @media (min-width: 768px)
+  +rmin(768)
     margin-left: 40px
     padding: 0
-  @media (min-width: 892px)
+  +rmin(892)
     margin-left: 63px
 
 .list__link
-  @media (min-width: 320px)
+  +rmin(320)
     padding: 10px
     font-size: 18px
-  @media (min-width: 768px)
+  +rmin(768)
     padding: 0
     font-size: 18px
 
@@ -96,15 +97,15 @@
   flex-direction: row
   justify-content: space-between
   align-items: center
-  @media (min-width: 320px)
+  +rmin(320)
     margin-top: 20px
-  @media (min-width: 768px)
+  +rmin(768)
     margin-top: 123px
 
 .header__article
-  @media (min-width: 320px)
+  +rmin(320)
     max-width: 100%
-  @media (min-width: 768px)
+  +rmin(768)
     max-width: 50%
 
 .article__title
@@ -128,13 +129,13 @@
   &:hover
     background-color: white
     color: #ff8400
-  @media (min-width: 320px)
+  +rmin(320)
     margin: 30px 0
-  @media (min-width: 768px)
+  +rmin(768)
     margin: 90px 0
 
 .header__image
-  @media (min-width: 320px)
+  +rmin(320)
     display: none
-  @media (min-width: 768px)
+  +rmin(768)
     display: block
