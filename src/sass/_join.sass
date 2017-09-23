@@ -2,32 +2,32 @@
   background-image: $gradient
   color: $main_text_color
   text-align: center
-  @media (min-width: 320px)
+  +rmin(320)
     padding: 50px 0
-  @media (min-width: 768px)
+  +rmin(768)
     padding: 150px 0
 
 .join__article
   margin: 0 auto
-  @media (min-width: 320px)
+  +rmin(320)
     width: 100%
-  @media (min-width: 425px)
+  +rmin(425)
     width: 65%
 
 .join__title
   text-transform: uppercase
   font-weight: 600
   letter-spacing: 6px
-  @media (min-width: 320px)
+  +rmin(320)
     font-size: 20px
-  @media (min-width: 768px)
+  +rmin(768)
     font-size: 30px
 
 .join__desc
   margin-top: 7px
-  @media (min-width: 320px)
+  +rmin(320)
     line-height: 20px
-  @media (min-width: 768px)
+  +rmin(768)
     line-height: 36px
 
 .email-input
@@ -44,10 +44,10 @@
     color: $main_text_color
   &:-ms-input-placeholder
     color: $main_text_color
-  @media (min-width: 320px)
+  +rmin(320)
     width: 80%
     margin-top: 50px
-  @media (min-width: 768px)
+  +rmin(768)
     width: 535px
     margin: 90px 30px 0 0
 
@@ -64,7 +64,7 @@
     cursor: pointer
     background: #fc5a59
     color: #ffffff
-  @media (min-width: 320px)
+  +rmin(320)
     margin-top: 50px
-  @media (min-width: 768px)
+  +rmin(768)
     margin-top: 90px
